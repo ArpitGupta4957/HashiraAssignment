@@ -62,7 +62,11 @@ public class Main {
                     String vl = fin.readLine();
                     bl = bl.replaceAll("\\s+", "");
                     vl = vl.replaceAll("\\s+", "");
-                    int base = Integer.parseInt(bl.substring(bl.indexOf(":\"") + 2).replace(",", ""));
+                    int base = Integer.parseInt(
+    bl.substring(bl.indexOf(":\"") + 2)
+      .replace(",", "")
+      .replace("\"", "")
+);
                     String val = vl.substring(vl.indexOf(":\"") + 2);
                     if (!val.isEmpty() && val.charAt(val.length() - 1) == '"') val = val.substring(0, val.length() - 1);
                     if (!val.isEmpty() && val.charAt(val.length() - 1) == ',') val = val.substring(0, val.length() - 1);
