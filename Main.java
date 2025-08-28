@@ -77,7 +77,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        String[] testfiles = {"testcase1.json", "testcase2.json"};
+        String[] testfiles = {"firstcase.json", "second.json"};
         for (int t = 0; t < 2; ++t) {
             int[] k = new int[1];
             List<Pair<Long, Long>> pts = new ArrayList<>();
