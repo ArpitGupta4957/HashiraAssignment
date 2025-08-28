@@ -51,9 +51,9 @@ public class Main {
         while ((ln = fin.readLine()) != null) {
             ln = ln.replaceAll("\\s+", "");
             if (ln.contains("\"n\"")) {
-                n = Integer.parseInt(ln.substring(ln.indexOf(":") + 1));
+                n = Integer.parseInt(ln.substring(ln.indexOf(":") + 1).replace(",", ""));
             } else if (ln.contains("\"k\"")) {
-                k[0] = Integer.parseInt(ln.substring(ln.indexOf(":") + 1));
+                k[0] = Integer.parseInt(ln.substring(ln.indexOf(":") + 1).replace(",", ""));
             } else {
                 int p = ln.indexOf('"');
                 if (p != -1 && Character.isDigit(ln.charAt(p + 1))) {
@@ -62,7 +62,7 @@ public class Main {
                     String vl = fin.readLine();
                     bl = bl.replaceAll("\\s+", "");
                     vl = vl.replaceAll("\\s+", "");
-                    int base = Integer.parseInt(bl.substring(bl.indexOf(":\"") + 2));
+                    int base = Integer.parseInt(bl.substring(bl.indexOf(":\"") + 2).replace(",", ""));
                     String val = vl.substring(vl.indexOf(":\"") + 2);
                     if (!val.isEmpty() && val.charAt(val.length() - 1) == '"') val = val.substring(0, val.length() - 1);
                     if (!val.isEmpty() && val.charAt(val.length() - 1) == ',') val = val.substring(0, val.length() - 1);
